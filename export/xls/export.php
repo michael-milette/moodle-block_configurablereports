@@ -28,7 +28,7 @@ function export_report($report) {
 
     $table = $report->table;
     $matrix = array();
-    $report_name = $report->name ?? 'report';
+    $report_name = format_string($report->name) ?? 'report';
     $filename = $report_name.'_'.(time()).'.xlsx';
 
     if (!empty($table->head)) {
